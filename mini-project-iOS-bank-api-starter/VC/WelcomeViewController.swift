@@ -55,7 +55,7 @@ class WelcomeViewController: UIViewController {
 
     @objc func loginButtonTapped() {
         // Handle Login Button Tap
-        print("login pressed")
+        navigationController?.pushViewController(SignInViewController(), animated: true)
     }
     
     func setupNavBar(){
