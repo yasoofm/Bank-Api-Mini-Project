@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04BF2B97A0AF00672FDF /* AppDelegate.swift */; };
 		05CF04C22B97A0AF00672FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04C12B97A0AF00672FDF /* SceneDelegate.swift */; };
-		05CF04C42B97A0AF00672FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04C32B97A0AF00672FDF /* ViewController.swift */; };
+		05CF04C42B97A0AF00672FDF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04C32B97A0AF00672FDF /* WelcomeViewController.swift */; };
 		05CF04C72B97A0AF00672FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CF04C52B97A0AF00672FDF /* Main.storyboard */; };
 		05CF04C92B97A0B000672FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CF04C82B97A0B000672FDF /* Assets.xcassets */; };
 		05CF04CC2B97A0B000672FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CF04CA2B97A0B000672FDF /* LaunchScreen.storyboard */; };
@@ -18,13 +18,21 @@
 		05CF04DB2B97A1FA00672FDF /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04DA2B97A1FA00672FDF /* TokenResponse.swift */; };
 		05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04DE2B97A22A00672FDF /* AmountChange.swift */; };
 		05CF04E12B97A23C00672FDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04E02B97A23C00672FDF /* User.swift */; };
+		FC5D4E492B984E2600B9BAD6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E482B984E2600B9BAD6 /* Kingfisher */; };
+		FC5D4E4C2B984E2E00B9BAD6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E4B2B984E2E00B9BAD6 /* SnapKit */; };
+		FC5D4E4E2B984E2E00B9BAD6 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E4D2B984E2E00B9BAD6 /* SnapKit-Dynamic */; };
+		FC5D4E512B984E3600B9BAD6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E502B984E3600B9BAD6 /* Alamofire */; };
+		FC5D4E532B984E3600B9BAD6 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E522B984E3600B9BAD6 /* AlamofireDynamic */; };
+		FC5D4E562B984E3F00B9BAD6 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E552B984E3F00B9BAD6 /* Eureka */; };
+		FC5D4E582B984E6100B9BAD6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */; };
+		FC5D4E5A2B984E7900B9BAD6 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E592B984E7900B9BAD6 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05CF04BC2B97A0AF00672FDF /* mini-project-iOS-bank-api-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mini-project-iOS-bank-api-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CF04BF2B97A0AF00672FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CF04C12B97A0AF00672FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05CF04C32B97A0AF00672FDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05CF04C32B97A0AF00672FDF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		05CF04C62B97A0AF00672FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05CF04C82B97A0B000672FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CF04CB2B97A0B000672FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +42,8 @@
 		05CF04DA2B97A1FA00672FDF /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		05CF04DE2B97A22A00672FDF /* AmountChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountChange.swift; sourceTree = "<group>"; };
 		05CF04E02B97A23C00672FDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		FC5D4E592B984E7900B9BAD6 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5D4E492B984E2600B9BAD6 /* Kingfisher in Frameworks */,
+				FC5D4E512B984E3600B9BAD6 /* Alamofire in Frameworks */,
+				FC5D4E532B984E3600B9BAD6 /* AlamofireDynamic in Frameworks */,
+				FC5D4E4C2B984E2E00B9BAD6 /* SnapKit in Frameworks */,
+				FC5D4E4E2B984E2E00B9BAD6 /* SnapKit-Dynamic in Frameworks */,
+				FC5D4E562B984E3F00B9BAD6 /* Eureka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +126,7 @@
 				05CF04DA2B97A1FA00672FDF /* TokenResponse.swift */,
 				05CF04E02B97A23C00672FDF /* User.swift */,
 				05CF04DE2B97A22A00672FDF /* AmountChange.swift */,
+				FC5D4E592B984E7900B9BAD6 /* Tag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,7 +134,8 @@
 		05CF04DD2B97A21600672FDF /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				05CF04C32B97A0AF00672FDF /* ViewController.swift */,
+				05CF04C32B97A0AF00672FDF /* WelcomeViewController.swift */,
+				FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -138,6 +156,14 @@
 			dependencies = (
 			);
 			name = "mini-project-iOS-bank-api-starter";
+			packageProductDependencies = (
+				FC5D4E482B984E2600B9BAD6 /* Kingfisher */,
+				FC5D4E4B2B984E2E00B9BAD6 /* SnapKit */,
+				FC5D4E4D2B984E2E00B9BAD6 /* SnapKit-Dynamic */,
+				FC5D4E502B984E3600B9BAD6 /* Alamofire */,
+				FC5D4E522B984E3600B9BAD6 /* AlamofireDynamic */,
+				FC5D4E552B984E3F00B9BAD6 /* Eureka */,
+			);
 			productName = "mini-project-iOS-bank-api-starter";
 			productReference = 05CF04BC2B97A0AF00672FDF /* mini-project-iOS-bank-api-starter.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +192,12 @@
 				Base,
 			);
 			mainGroup = 05CF04B32B97A0AF00672FDF;
+			packageReferences = (
+				FC5D4E472B984E2600B9BAD6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				FC5D4E4A2B984E2E00B9BAD6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FC5D4E4F2B984E3600B9BAD6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FC5D4E542B984E3F00B9BAD6 /* XCRemoteSwiftPackageReference "Eureka" */,
+			);
 			productRefGroup = 05CF04BD2B97A0AF00672FDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CF04C42B97A0AF00672FDF /* ViewController.swift in Sources */,
+				05CF04C42B97A0AF00672FDF /* WelcomeViewController.swift in Sources */,
 				05CF04D42B97A12600672FDF /* customView.swift in Sources */,
+				FC5D4E5A2B984E7900B9BAD6 /* Tag.swift in Sources */,
+				FC5D4E582B984E6100B9BAD6 /* SignupViewController.swift in Sources */,
 				05CF04D82B97A15200672FDF /* NetworkManager.swift in Sources */,
 				05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */,
 				05CF04E12B97A23C00672FDF /* User.swift in Sources */,
@@ -421,6 +455,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC5D4E472B984E2600B9BAD6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		FC5D4E4A2B984E2E00B9BAD6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		FC5D4E4F2B984E3600B9BAD6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+		FC5D4E542B984E3F00B9BAD6 /* XCRemoteSwiftPackageReference "Eureka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/Eureka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC5D4E482B984E2600B9BAD6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC5D4E472B984E2600B9BAD6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		FC5D4E4B2B984E2E00B9BAD6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC5D4E4A2B984E2E00B9BAD6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FC5D4E4D2B984E2E00B9BAD6 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC5D4E4A2B984E2E00B9BAD6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		FC5D4E502B984E3600B9BAD6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC5D4E4F2B984E3600B9BAD6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FC5D4E522B984E3600B9BAD6 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC5D4E4F2B984E3600B9BAD6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		FC5D4E552B984E3F00B9BAD6 /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC5D4E542B984E3F00B9BAD6 /* XCRemoteSwiftPackageReference "Eureka" */;
+			productName = Eureka;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05CF04B42B97A0AF00672FDF /* Project object */;
 }

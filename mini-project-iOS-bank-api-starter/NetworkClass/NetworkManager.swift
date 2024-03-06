@@ -6,13 +6,13 @@
 //
 
 import Foundation
-import alamofire
+import Alamofire
 class NetworkManager {
     private let baseUrl = "https://coded-bank-api.eapi.joincoded.com/"
     
     static let shared = NetworkManager()
     
-    private func signup(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+    func signup(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
         let url = baseUrl + "signup"
         AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
             switch response.result {
@@ -23,7 +23,7 @@ class NetworkManager {
             }
         }
     }
-    private func deposit(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
+    func deposit(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
         let url = baseUrl + "deposit"
         let headers: HTTPHeaders = [.authorization(bearerToken: token)]
         AF.request(url, method: .put, parameters: amountChange, encoder: JSONParameterEncoder.default, headers: headers).response { response in
