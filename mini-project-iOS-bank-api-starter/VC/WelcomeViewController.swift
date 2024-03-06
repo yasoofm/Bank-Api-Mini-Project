@@ -13,14 +13,16 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        
+        setupNavBar()
 
-        // Create Sign In Button
-        let signInButton = UIButton()
-        signInButton.setTitle("Sign In", for: .normal)
-        signInButton.setTitleColor(.white, for: .normal)
-        signInButton.backgroundColor = .systemGray3
-        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
-        view.addSubview(signInButton)
+        // Create Sign Up Button
+        let signUpButton = UIButton()
+        signUpButton.setTitle("Sign Up", for: .normal)
+        signUpButton.setTitleColor(.white, for: .normal)
+        signUpButton.backgroundColor = .systemGray3
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        view.addSubview(signUpButton)
 
         // Create Login Button
         let loginButton = UIButton()
@@ -31,7 +33,7 @@ class WelcomeViewController: UIViewController {
         view.addSubview(loginButton)
 
         // Apply SnapKit Constraints
-        signInButton.snp.makeConstraints { make in
+        signUpButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().offset(-50)
             make.centerX.equalToSuperview()
             make.width.equalTo(200)
@@ -39,20 +41,26 @@ class WelcomeViewController: UIViewController {
         }
 
         loginButton.snp.makeConstraints { make in
-            make.bottom.equalTo(signInButton.snp.top).offset(-20)
+            make.bottom.equalTo(signUpButton.snp.top).offset(-20)
             make.centerX.equalToSuperview()
             make.width.equalTo(200)
             make.height.equalTo(50)
         }
     }
 
-    @objc func signInButtonTapped() {
+    @objc func signUpButtonTapped() {
         // Handle Sign In Button Tap
-        print("signup pressed")
+        navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
 
     @objc func loginButtonTapped() {
         // Handle Login Button Tap
         print("login pressed")
+    }
+    
+    func setupNavBar(){
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }

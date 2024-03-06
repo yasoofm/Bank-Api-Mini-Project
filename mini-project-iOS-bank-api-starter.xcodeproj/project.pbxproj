@@ -26,6 +26,9 @@
 		FC5D4E562B984E3F00B9BAD6 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = FC5D4E552B984E3F00B9BAD6 /* Eureka */; };
 		FC5D4E582B984E6100B9BAD6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */; };
 		FC5D4E5A2B984E7900B9BAD6 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E592B984E7900B9BAD6 /* Tag.swift */; };
+		FC5D4E5C2B98512100B9BAD6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */; };
+		FC5D4E5E2B9855FF00B9BAD6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */; };
+		FC5D4E602B985CB700B9BAD6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		05CF04E02B97A23C00672FDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FC5D4E592B984E7900B9BAD6 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 				05CF04E02B97A23C00672FDF /* User.swift */,
 				05CF04DE2B97A22A00672FDF /* AmountChange.swift */,
 				FC5D4E592B984E7900B9BAD6 /* Tag.swift */,
+				FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +143,8 @@
 			children = (
 				05CF04C32B97A0AF00672FDF /* WelcomeViewController.swift */,
 				FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */,
+				FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */,
+				FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -230,7 +239,10 @@
 				FC5D4E5A2B984E7900B9BAD6 /* Tag.swift in Sources */,
 				FC5D4E582B984E6100B9BAD6 /* SignupViewController.swift in Sources */,
 				05CF04D82B97A15200672FDF /* NetworkManager.swift in Sources */,
+				FC5D4E602B985CB700B9BAD6 /* SignInViewController.swift in Sources */,
+				FC5D4E5E2B9855FF00B9BAD6 /* UserDetails.swift in Sources */,
 				05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */,
+				FC5D4E5C2B98512100B9BAD6 /* ProfileViewController.swift in Sources */,
 				05CF04E12B97A23C00672FDF /* User.swift in Sources */,
 				05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */,
 				05CF04DB2B97A1FA00672FDF /* TokenResponse.swift in Sources */,
