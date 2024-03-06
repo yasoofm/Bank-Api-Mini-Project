@@ -39,13 +39,16 @@ class NetworkManager {
     //MARK: OTHER Networking Functions
     
     func fetchUserDetails(token: String, completion: @escaping (Result<UserDetails, Error>) -> Void){
+        
         let headers: HTTPHeaders = [.authorization(bearerToken: token)]
-        AF.request(baseUrl).responseDecodable(of: UserDetails.self){ response in
+        
+        AF.request(baseUrl + "account",headers: headers).responseDecodable(of: UserDetails.self){ response in
             switch response.result{
             case .success(let userDetails):
                 completion(.success(userDetails))
             case .failure(let afError):
                 completion(.failure(afError as Error))
+                print(afError.localizedDescription)
             }
         }
     }

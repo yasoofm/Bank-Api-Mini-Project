@@ -9,8 +9,6 @@ import UIKit
 import Eureka
 
 class SignUpViewController: FormViewController {
-
-    var token: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,8 +79,9 @@ class SignUpViewController: FormViewController {
         NetworkManager.shared.signup(user: user) { result in
             switch result{
             case .success(let tokenResponse):
-                print(tokenResponse.token)
-                self.token = tokenResponse.token
+                let profileVC = ProfileViewController()
+                profileVC.token = tokenResponse.token
+                self.navigationController?.pushViewController(profileVC, animated: true)
             case .failure(let error):
                 print(error)
             }
