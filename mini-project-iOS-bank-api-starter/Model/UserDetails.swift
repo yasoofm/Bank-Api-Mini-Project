@@ -9,6 +9,8 @@ import Foundation
 
 struct UserDetails: Codable{
     var username: String
+    var password: String
     var email: String
     var balance: Double
+    var id: Int64
 }
