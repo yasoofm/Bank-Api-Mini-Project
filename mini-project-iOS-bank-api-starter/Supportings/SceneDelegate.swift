@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // MARK: UPDATE THE FOLLOWING LINE FOR YOUR InitialViewController
-        window.rootViewController = SignUpViewController()
+        window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
         self.window = window
         self.window?.makeKeyAndVisible()
     }
