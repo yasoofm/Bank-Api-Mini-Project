@@ -36,23 +36,6 @@ class NetworkManager {
         }
     }
     
-//    let parameters: [String: Any] = [
-//                "username": username,
-//                "password": password
-//            ]
-//    func signin(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
-//        let url = baseUrl + "signin"
-//    AF.request("https://coded-bank-api.eapi.joincoded.com/signin", method: .post, parameters: user, encoding: JSONEncoding.default)
-//        .responseJSON { response in
-//            switch response.result {
-//            case .success(let value):
-//                print("Signin successful: \(value)")
-//                
-//            case .failure(let error):
-//                print("Signin failed: \(error.localizedDescription)")
-//                // Handle error
-//            }
-//    }
         
         
     func deposit(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
