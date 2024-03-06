@@ -25,6 +25,8 @@ class ProfileViewController: UIViewController {
         addSubViews()
         setupUI()
         setupLayout()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(callFetch), name: NSNotification.Name(rawValue: "deposit"), object: nil)
     }
     
     func addSubViews(){
@@ -56,13 +58,32 @@ class ProfileViewController: UIViewController {
             make.top.equalTo(emailLabel.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
         }
+        depositButton.snp.makeConstraints { make in
+            make.top.equalTo(balanceLabel.snp.bottom).offset(30)
+            make.centerX.equalToSuperview().offset(-100)
+            make.height.equalTo(45)
+            make.width.equalTo(100)
+        }
+        withdrawButton.snp.makeConstraints { make in
+            make.top.equalTo(balanceLabel.snp.bottom).offset(30)
+            make.centerX.equalToSuperview().offset(100)
+            make.height.equalTo(45)
+            make.width.equalTo(100)
+        }
+    }
+    
+    @objc func callFetch(){
+        fetchUserDetails(token: self.token ?? "")
     }
     
     @objc func navToDeposit(){
-        navigationController?.pushViewController(ProfileViewController(), animated: true)
+        let depositVC = DepositViewController()
+        depositVC.userToken = token
+        navigationController?.pushViewController(depositVC, animated: true)
     }
     
     @objc func navToWithdraw(){
+        
         navigationController?.pushViewController(ProfileViewController(), animated: true)
     }
     

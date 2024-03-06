@@ -29,6 +29,7 @@
 		FC5D4E5C2B98512100B9BAD6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */; };
 		FC5D4E5E2B9855FF00B9BAD6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */; };
 		FC5D4E602B985CB700B9BAD6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */; };
+		FC5D4E622B989B6000B9BAD6 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E612B989B6000B9BAD6 /* DepositViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FC5D4E612B989B6000B9BAD6 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				FC5D4E572B984E6100B9BAD6 /* SignupViewController.swift */,
 				FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */,
 				FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */,
+				FC5D4E612B989B6000B9BAD6 /* DepositViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				FC5D4E5C2B98512100B9BAD6 /* ProfileViewController.swift in Sources */,
 				05CF04E12B97A23C00672FDF /* User.swift in Sources */,
 				05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */,
+				FC5D4E622B989B6000B9BAD6 /* DepositViewController.swift in Sources */,
 				05CF04DB2B97A1FA00672FDF /* TokenResponse.swift in Sources */,
 				05CF04C22B97A0AF00672FDF /* SceneDelegate.swift in Sources */,
 			);
