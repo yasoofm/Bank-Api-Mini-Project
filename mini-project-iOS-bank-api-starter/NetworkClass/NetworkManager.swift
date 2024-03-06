@@ -23,6 +23,38 @@ class NetworkManager {
             }
         }
     }
+    
+    func signin(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+        let url = baseUrl + "signin"
+        AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+            switch response.result {
+            case .success(let value):
+                completion(.success(value))
+            case .failure(let afError):
+                completion(.failure(afError as Error))
+            }
+        }
+    }
+    
+//    let parameters: [String: Any] = [
+//                "username": username,
+//                "password": password
+//            ]
+//    func signin(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+//        let url = baseUrl + "signin"
+//    AF.request("https://coded-bank-api.eapi.joincoded.com/signin", method: .post, parameters: user, encoding: JSONEncoding.default)
+//        .responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                print("Signin successful: \(value)")
+//                
+//            case .failure(let error):
+//                print("Signin failed: \(error.localizedDescription)")
+//                // Handle error
+//            }
+//    }
+        
+        
     func deposit(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
         let url = baseUrl + "deposit"
         let headers: HTTPHeaders = [.authorization(bearerToken: token)]
@@ -37,6 +69,7 @@ class NetworkManager {
 
     
     //MARK: OTHER Networking Functions
+    
     
     func fetchUserDetails(token: String, completion: @escaping (Result<UserDetails, Error>) -> Void){
         let headers: HTTPHeaders = [.authorization(bearerToken: token)]

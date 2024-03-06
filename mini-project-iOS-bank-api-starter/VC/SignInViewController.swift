@@ -28,16 +28,19 @@ class SignInViewController: FormViewController {
             <<< TextRow() { row in
                 row.title = "Username"
                 row.placeholder = "Enter your username"
-            }.onChange { [weak self] row in
-                // Handle username change if needed
+                row.tag = "username"
+//            }.onChange { [weak self] row in
+//               
             }
 
             <<< PasswordRow() { row in
                 row.title = "Password"
                 row.placeholder = "Enter your password"
-            }.onChange { [weak self] row in
-                // Handle password change if needed
+                row.tag = "password"
+//            }.onChange { [weak self] row in
+//             
             }
+       
     }
 
     private func setupNavigation() {
@@ -48,29 +51,36 @@ class SignInViewController: FormViewController {
     // MARK: - Actions
 
     @objc private func signinButtonTapped() {
-        guard let usernameRow = form.rowBy(tag: "Username") as? TextRow,
-              let passwordRow = form.rowBy(tag: "Password") as? PasswordRow,
+        guard let usernameRow = form.rowBy(tag: "username") as? TextRow,
+              let passwordRow = form.rowBy(tag: "password") as? PasswordRow,
               let username = usernameRow.value,
               let password = passwordRow.value else {
             // Handle invalid input
             return
         }
-let parameters: [String: Any] = [
-            "username": username,
-            "password": password
-        ]
+        
+        
+        
+        let user = User(username: username, email: "", password: password)
+                
+                NetworkManager.shared.signin(user: user) { result in
+                    switch result {
+                    case .success(let tokenResponse):
+                        
+                        print("Sign in successful. Token: \(tokenResponse.token)")
+                        DispatchQueue.main.async {
+                           
+                                            
+                            let vC = ProfileViewController()
+                            vC.token = tokenResponse.token
+                            self.navigationController?.pushViewController(vC, animated: true)
 
-        AF.request("https://coded-bank-api.eapi.joincoded.com/signin", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    print("Signin successful: (value)")
-                    // Navigate to next screen upon successful signin
-                    // Example: self.navigationController?.pushViewController(NextViewController(), animated: true)
-                case .failure(let error):
-                    print("Signin failed: (error.localizedDescription)")
-                    // Handle error
+                        }
+                    case .failure(let error):
+                        
+                        print("Sign in failed with error: \(error.localizedDescription)")
+                        DispatchQueue.main.async {
+                        }
+                    }
                 }
-        }
-    }
-}
+            }}
