@@ -1,15 +1,14 @@
 //
-//  DepositViewController.swift
+//  WithdrawViewController.swift
 //  mini-project-iOS-bank-api-starter
 //
 //  Created by yousef mandani on 06/03/2024.
 //
-
 import UIKit
 import Alamofire
 import Eureka
 
-class DepositViewController: FormViewController {
+class WithdrawViewController: FormViewController {
 
     var userToken: String? //assume you have it
 
@@ -17,6 +16,7 @@ class DepositViewController: FormViewController {
         super.viewDidLoad()
 
         tableView.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
+        navigationItem.title = "Withdraw"
         setupForm()
         setupNavigation()
     }
@@ -26,7 +26,7 @@ class DepositViewController: FormViewController {
         <<< DecimalRow() { row in
             row.tag = "amount"
             row.title = "Amount"
-            row.placeholder = "Enter deposit amount"
+            row.placeholder = "Enter withdraw amount"
             row.placeholderColor = .gray
             row.validationOptions = .validatesOnChange
             row.add(rule: RuleRequired())
@@ -40,11 +40,11 @@ class DepositViewController: FormViewController {
     }
 
     private func setupNavigation() {
-        navigationItem.title = "Deposit"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.right.fill"), style: .plain, target: self, action: #selector(deposit))
+        navigationItem.title = "Withdraw"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.right.fill"), style: .plain, target: self, action: #selector(withdraw))
     }
 
-    @objc func deposit(){
+    @objc func withdraw(){
         let errors = form.validate()
         guard errors.isEmpty else {
             print(errors)
@@ -55,7 +55,7 @@ class DepositViewController: FormViewController {
         let amountRow: DecimalRow? = form.rowBy(tag: "amount")
         let amount = AmountChange(amount: amountRow?.value ?? 0)
 
-        NetworkManager.shared.deposit(token: self.userToken ?? "", amountChange: amount) { result in
+        NetworkManager.shared.withdraw(token: self.userToken ?? "", amountChange: amount) { result in
             switch result{
             case .success():
                 print(self.userToken ?? "no token")

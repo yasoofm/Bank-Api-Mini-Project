@@ -8,5 +8,5 @@
 import Foundation
 
 enum Tag{
-    case username, email, password
+    case username, email, password, image
 }

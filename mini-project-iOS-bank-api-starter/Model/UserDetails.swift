@@ -13,4 +13,5 @@ struct UserDetails: Codable{
     var email: String
     var balance: Double
     var id: Int64
+    var image: String?
 }

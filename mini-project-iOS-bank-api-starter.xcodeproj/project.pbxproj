@@ -30,6 +30,12 @@
 		FC5D4E5E2B9855FF00B9BAD6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */; };
 		FC5D4E602B985CB700B9BAD6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */; };
 		FC5D4E622B989B6000B9BAD6 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E612B989B6000B9BAD6 /* DepositViewController.swift */; };
+		FC5D4E662B98A9F700B9BAD6 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D4E652B98A9F700B9BAD6 /* WithdrawViewController.swift */; };
+		FCA6090D2B99874C00BAFE58 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6090C2B99874C00BAFE58 /* TransactionsViewController.swift */; };
+		FCA6090F2B99877F00BAFE58 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6090E2B99877F00BAFE58 /* Transaction.swift */; };
+		FCA609112B99907F00BAFE58 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA609102B99907F00BAFE58 /* TransferViewController.swift */; };
+		FCA609132B99989300BAFE58 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA609122B99989300BAFE58 /* UpdateViewController.swift */; };
+		FCA609152B999DDA00BAFE58 /* UpdateProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA609142B999DDA00BAFE58 /* UpdateProfileRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FC5D4E612B989B6000B9BAD6 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
+		FC5D4E652B98A9F700B9BAD6 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		FCA6090C2B99874C00BAFE58 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		FCA6090E2B99877F00BAFE58 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		FCA609102B99907F00BAFE58 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		FCA609122B99989300BAFE58 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		FCA609142B999DDA00BAFE58 /* UpdateProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +148,8 @@
 				05CF04DE2B97A22A00672FDF /* AmountChange.swift */,
 				FC5D4E592B984E7900B9BAD6 /* Tag.swift */,
 				FC5D4E5D2B9855FF00B9BAD6 /* UserDetails.swift */,
+				FCA6090E2B99877F00BAFE58 /* Transaction.swift */,
+				FCA609142B999DDA00BAFE58 /* UpdateProfileRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +162,10 @@
 				FC5D4E5B2B98512100B9BAD6 /* ProfileViewController.swift */,
 				FC5D4E5F2B985CB700B9BAD6 /* SignInViewController.swift */,
 				FC5D4E612B989B6000B9BAD6 /* DepositViewController.swift */,
+				FC5D4E652B98A9F700B9BAD6 /* WithdrawViewController.swift */,
+				FCA6090C2B99874C00BAFE58 /* TransactionsViewController.swift */,
+				FCA609102B99907F00BAFE58 /* TransferViewController.swift */,
+				FCA609122B99989300BAFE58 /* UpdateViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -238,11 +256,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CF04C42B97A0AF00672FDF /* WelcomeViewController.swift in Sources */,
+				FCA609112B99907F00BAFE58 /* TransferViewController.swift in Sources */,
 				05CF04D42B97A12600672FDF /* customView.swift in Sources */,
 				FC5D4E5A2B984E7900B9BAD6 /* Tag.swift in Sources */,
 				FC5D4E582B984E6100B9BAD6 /* SignupViewController.swift in Sources */,
+				FC5D4E662B98A9F700B9BAD6 /* WithdrawViewController.swift in Sources */,
 				05CF04D82B97A15200672FDF /* NetworkManager.swift in Sources */,
+				FCA6090F2B99877F00BAFE58 /* Transaction.swift in Sources */,
+				FCA6090D2B99874C00BAFE58 /* TransactionsViewController.swift in Sources */,
 				FC5D4E602B985CB700B9BAD6 /* SignInViewController.swift in Sources */,
+				FCA609132B99989300BAFE58 /* UpdateViewController.swift in Sources */,
 				FC5D4E5E2B9855FF00B9BAD6 /* UserDetails.swift in Sources */,
 				05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */,
 				FC5D4E5C2B98512100B9BAD6 /* ProfileViewController.swift in Sources */,
@@ -250,6 +273,7 @@
 				05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */,
 				FC5D4E622B989B6000B9BAD6 /* DepositViewController.swift in Sources */,
 				05CF04DB2B97A1FA00672FDF /* TokenResponse.swift in Sources */,
+				FCA609152B999DDA00BAFE58 /* UpdateProfileRequest.swift in Sources */,
 				05CF04C22B97A0AF00672FDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,33 +19,41 @@ class SignInViewController: FormViewController {
 
         setupForm()
         setupNavigation()
+        
+        tableView.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
+        navigationItem.title = "Sign In"
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
     }
 
     // MARK: - Setup
 
     private func setupForm() {
-        form +++ Section("Sign In")
+        form +++ Section()
             <<< TextRow() { row in
                 row.title = "Username"
                 row.placeholder = "Enter your username"
+                row.placeholderColor = .gray
                 row.tag = "username"
-//            }.onChange { [weak self] row in
-//               
+                row.cellUpdate { cell, row in
+                    cell.backgroundColor = #colorLiteral(red: 0.8352941275, green: 0.8352941275, blue: 0.8352941275, alpha: 1)
+                }
             }
 
             <<< PasswordRow() { row in
                 row.title = "Password"
                 row.placeholder = "Enter your password"
+                row.placeholderColor = .gray
                 row.tag = "password"
-//            }.onChange { [weak self] row in
-//             
+                row.cellUpdate { cell, row in
+                    cell.backgroundColor = #colorLiteral(red: 0.8352941275, green: 0.8352941275, blue: 0.8352941275, alpha: 1)
+                }
             }
        
     }
 
     private func setupNavigation() {
-        navigationItem.title = "Sign In"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign In", style: .plain, target: self, action: #selector(signinButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.right.fill"), style: .plain, target: self, action: #selector(signinButtonTapped))
     }
 
     // MARK: - Actions

@@ -1,27 +1,30 @@
 //
-//  SignupPageViewController.swift
+//  UpdateViewController.swift
 //  mini-project-iOS-bank-api-starter
 //
-//  Created by yousef mandani on 06/03/2024.
+//  Created by yousef mandani on 07/03/2024.
 //
 
 import UIKit
 import Eureka
 
-class SignUpViewController: FormViewController {
+class UpdateViewController: FormViewController {
     
+    var token: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         tableView.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
-        navigationItem.title = "Sign Up"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.right.fill"), style: .plain, target: self, action: #selector(signUp))
+        navigationItem.title = "Update Profile"
         navigationController?.navigationBar.tintColor = .black
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
+        setupNavigation()
+        // Do any additional setup after loading the view.
         form +++ Section()
         <<< TextRow{ row in
             row.title = "Username"
-            row.placeholder = "Enter your username"
+            row.placeholder = "Enter new username"
             row.placeholderColor = .gray
             row.tag = "\(Tag.username)"
             row.add(rule: RuleRequired())
@@ -34,10 +37,10 @@ class SignUpViewController: FormViewController {
             }
         }
         <<< TextRow{ row in
-            row.title = "Password"
-            row.placeholder = "Enter your password"
-            row.tag = "\(Tag.password)"
+            row.title = "Image"
+            row.placeholder = "Enter new image"
             row.placeholderColor = .gray
+            row.tag = "\(Tag.image)"
             row.add(rule: RuleRequired())
             row.validationOptions = .validatesOnChange
             row.cellUpdate { cell, row in
@@ -47,11 +50,11 @@ class SignUpViewController: FormViewController {
                 }
             }
         }
-        <<< EmailRow{ row in
-            row.title = "Email"
-            row.placeholder = "Enter your email"
+        <<< TextRow{ row in
+            row.title = "Password"
+            row.placeholder = "Enter new password"
             row.placeholderColor = .gray
-            row.tag = "\(Tag.email)"
+            row.tag = "\(Tag.password)"
             row.add(rule: RuleRequired())
             row.validationOptions = .validatesOnChange
             row.cellUpdate { cell, row in
@@ -62,34 +65,39 @@ class SignUpViewController: FormViewController {
             }
         }
     }
-    @objc func signUp(){
+    private func setupNavigation() {
+        navigationItem.title = "Update"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.right.fill"), style: .plain, target: self, action: #selector(updateProfile))
+    }
+    
+    @objc func updateProfile(){
         let errors = form.validate()
         guard errors.isEmpty else{
             presentAlertWithTitle(title: "🚨", message: "\(errors.count) fields are missing")
             return
         }
-                
+        
         let usernameRow: TextRow? = form.rowBy(tag: "\(Tag.username)")
+        let imageRow: TextRow? = form.rowBy(tag: "\(Tag.image)")
         let passwordRow: TextRow? = form.rowBy(tag: "\(Tag.password)")
-        let emailRow: EmailRow? = form.rowBy(tag: "\(Tag.email)")
         
         let username = usernameRow?.value ?? ""
+        let image = imageRow?.value ?? ""
         let password = passwordRow?.value ?? ""
-        let email = emailRow?.value ?? ""
         
-        let user = User(username: username, email: email, password: password)
+        let newProfile = UpdateProfileRequest(username: username, image: image, password: password)
         
-        NetworkManager.shared.signup(user: user) { result in
+        NetworkManager.shared.updateProfile(token: self.token ?? "", updateProfileRequest: newProfile) { result in
             switch result{
-            case .success(let tokenResponse):
-                let profileVC = ProfileViewController()
-                profileVC.token = tokenResponse.token
-                self.navigationController?.pushViewController(profileVC, animated: true)
+            case .success:
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
+                self.navigationController?.popViewController(animated: true)
             case .failure(let error):
                 print(error)
             }
         }
     }
+    
     private func presentAlertWithTitle(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))

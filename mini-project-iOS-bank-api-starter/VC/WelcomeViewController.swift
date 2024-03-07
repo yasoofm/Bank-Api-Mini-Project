@@ -9,26 +9,45 @@ import UIKit
 import SnapKit
 
 class WelcomeViewController: UIViewController {
+    
+    let imageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
         
         setupNavBar()
+        
+        view.addSubview(imageView)
+        imageView.image = UIImage(named: "logo")
+        imageView.contentMode = .scaleAspectFit
+        imageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(400)
+        }
 
         // Create Sign Up Button
         let signUpButton = UIButton()
         signUpButton.setTitle("Sign Up", for: .normal)
-        signUpButton.setTitleColor(.white, for: .normal)
-        signUpButton.backgroundColor = .systemGray3
+        signUpButton.backgroundColor = #colorLiteral(red: 0.537254902, green: 0.537254902, blue: 0.537254902, alpha: 1)
+        signUpButton.layer.cornerRadius = 5
+        signUpButton.layer.shadowColor = UIColor.black.cgColor
+        signUpButton.layer.shadowOpacity = 0.5
+        signUpButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        signUpButton.layer.shadowRadius = 4
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         view.addSubview(signUpButton)
 
         // Create Login Button
         let loginButton = UIButton()
         loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(.white, for: .normal)
-        loginButton.backgroundColor = .systemGray3
+        loginButton.backgroundColor = #colorLiteral(red: 0.537254902, green: 0.537254902, blue: 0.537254902, alpha: 1)
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOpacity = 0.5
+        loginButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        loginButton.layer.shadowRadius = 4
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         view.addSubview(loginButton)
 
